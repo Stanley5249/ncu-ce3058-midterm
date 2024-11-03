@@ -1,0 +1,34 @@
+version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "docstring-parser"
+version = "0.16"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/08/12/9c22a58c0b1e29271051222d8906257616da84135af9ed167c9e28f85cb3/docstring_parser-0.16.tar.gz", hash = "sha256:538beabd0af1e2db0146b6bd3caa526c35a34d61af9fd2887f3a8a27a739aa6e", size = 26565 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d5/7c/e9fcff7623954d86bdc17782036cbf715ecab1bec4847c008557affe1ca8/docstring_parser-0.16-py3-none-any.whl", hash = "sha256:bf0a1387354d3691d102edef7ec124f219ef639982d096e26e3b60aeffa90637", size = 36533 },
+]
+
+[[package]]
+name = "sugar-cli"
+version = "0.0.1.dev0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "docstring-parser" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/86/0e/3161c5081d27b7760f4431bd98b694489f7f00d809c44e4cae32fd84aee4/sugar_cli-0.0.1.dev0.tar.gz", hash = "sha256:36e0423917d542c2ae2dad69f7aee73a3fe62c9f679b7321f6a1d532cedddded", size = 22784 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/c0/f9fc753de8e2368002ae908e9b89b651a3105358e192e4d3e4b73f3868dd/sugar_cli-0.0.1.dev0-py3-none-any.whl", hash = "sha256:0e1c866970a7064a7d1b5ed85f052fbbbc12f5e325627a828cc8bee505f89712", size = 24040 },
+]
+
+[[package]]
+name = "track"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "sugar-cli" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "sugar-cli", specifier = ">=0.0.1.dev0" }]
